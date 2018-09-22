@@ -6,20 +6,29 @@
   Name="AppModule"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
-  <ViewUsage
-    Name="EmployeesVO1"
-    ViewObjectName="com.abhishek.model.vo.EmployeesVO"/>
-  <ViewUsage
-    Name="EmployeesVO2"
-    ViewObjectName="com.abhishek.model.vo.EmployeesVO"/>
+  ClearCacheOnRollback="true"
+  ComponentClass="com.abhishek.model.eo.AppModuleImpl"
+  ComponentInterface="com.abhishek.model.eo.common.AppModule">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewUsage
     Name="DropdownVO1"
     ViewObjectName="com.abhishek.model.vo.DropdownVO"/>
-  <ViewLinkUsage
-    Name="EmpManagerFkLink1"
-    ViewLinkObjectName="com.abhishek.model.vo.EmpManagerFkLink"
-    SrcViewUsageName="com.abhishek.model.eo.AppModule.EmployeesVO1"
-    DstViewUsageName="com.abhishek.model.eo.AppModule.EmployeesVO2"
-    Reversed="false"/>
+  <ViewUsage
+    Name="EmpSQLQueryVO1"
+    ViewObjectName="com.abhishek.model.vo.EmpSQLQueryVO"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setBindVarAndExceuteLov"
+      MethodName="setBindVarAndExceuteLov">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="deptId"
+        Type="java.lang.Integer"/>
+    </Method>
+  </ClientInterface>
 </AppModule>

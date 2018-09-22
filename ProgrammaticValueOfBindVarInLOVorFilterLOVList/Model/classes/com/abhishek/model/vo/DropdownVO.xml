@@ -23,12 +23,16 @@
     </SchemaBasedProperties>
   </Properties>
   <ViewAccessor
-    Name="EmployeesVO1"
-    ViewObjectName="com.abhishek.model.vo.EmployeesVO"
-    RowLevelBinds="true"/>
+    Name="EmpSQLQueryVO1"
+    ViewObjectName="com.abhishek.model.vo.EmpSQLQueryVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="EmpSQLQueryVOCriteria"
+      FullName="com.abhishek.model.vo.EmpSQLQueryVO.EmpSQLQueryVOCriteria"/>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_EmployeeIDTrans"
-    ListVOName="EmployeesVO1"
+    ListVOName="EmpSQLQueryVO1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
@@ -64,7 +68,6 @@
   </ViewAttribute>
   <ViewAttribute
     Name="EmployeeIDTrans"
-    IsUpdateable="false"
     IsSelected="false"
     IsPersistent="false"
     PrecisionRule="true"
